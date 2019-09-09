@@ -60,6 +60,11 @@ $config = [
         ],
         */
     ],
+    'modules' => [
+        'university' => [
+            'class' => 'app\modules\university\Module',
+        ],
+    ],
     'params' => $params,
     'on beforeAction' => function ($e) {
         // die('hi');
