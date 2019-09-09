@@ -2,6 +2,7 @@
 
 $params = require __DIR__ . '/params.php';
 $db = require __DIR__ . '/db.php';
+$university_db = require __DIR__ . '/university_db.php';
 
 $config = [
     'id' => 'basic',
@@ -22,7 +23,7 @@ $config = [
         ],
         'user' => [
             'identityClass' => 'app\models\User',
-            'enableAutoLogin' => true,
+            'enableAutoLogin' => false,
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',
@@ -63,6 +64,10 @@ $config = [
     'modules' => [
         'university' => [
             'class' => 'app\modules\university\Module',
+            'defaultRoute' => 'default',
+            'components' => [
+                'db' => $university_db,
+            ],
         ],
     ],
     'params' => $params,
