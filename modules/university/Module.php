@@ -10,5 +10,6 @@ class Module extends MainModule
     public function init()
     {
         parent::init();
+        $this->layout = 'university';
     }
 }
