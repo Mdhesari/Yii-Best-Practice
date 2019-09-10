@@ -2,7 +2,7 @@
 
 use yii\widgets\ActiveForm;
 use yii\helpers\Url;
-use app\models\ModelLoginTel;
+use app\modules\university\models\ModelLoginTel;
 
 $model = new ModelLoginTel;
 
@@ -22,7 +22,7 @@ $model = new ModelLoginTel;
         <div class="row">
             <div class="col-12 text-center main">
                 <p>شماره همراه خود را وارد کنید</p>
-                <?php $form = ActiveForm::begin(['action' => Url::to(['/student/login'])]); ?>
+                <?php $form = ActiveForm::begin(['action' => Url::to(['/university/auth/login'])]); ?>
                 <div class="form-group">
                     <?= $form->field($model, 'tel', ['template' => '{input}{error}'])->textInput(['class' => 'form-control PhoneNumber', 'autocomplete' => 'off', 'autocomplete' => 'false', 'id' => 'tel-input', 'value' => '09', 'maxLength' => '11', 'pattern' => '^\d{4}\d{3}\d{4}$'])->label(false); ?>
                 </div>

@@ -64,7 +64,7 @@ $config = [
     'modules' => [
         'university' => [
             'class' => 'app\modules\university\Module',
-            'defaultRoute' => 'default',
+            'defaultRoute' => 'auth',
             'components' => [
                 'db' => $university_db,
             ],
